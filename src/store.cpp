@@ -40,7 +40,7 @@ void Store::Launch()
 	}
 }
 
-bool Store::ExecuteOperation(std::string& input, std::string& output)
+bool Store::ExecuteOperation(const std::string& input, std::string& output)
 {
 	Operation op;
 	if (!ParseInput(input, op))
@@ -55,7 +55,7 @@ bool Store::ExecuteOperation(std::string& input, std::string& output)
 }
 
 // check if the input is valid, return false if it is not
-bool Store::ParseInput(std::string& input, Operation& op)
+bool Store::ParseInput(const std::string& input, Operation& op)
 {
 	#ifdef DEBUG
 		std::cout << "Received input: " << input << std::endl;

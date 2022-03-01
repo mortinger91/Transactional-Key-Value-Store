@@ -32,9 +32,9 @@ private:
 public:
 	Store(): countTransactions(0) {};
 	void Launch();
-	bool ExecuteOperation(std::string& input, std::string& output);
+	bool ExecuteOperation(const std::string& input, std::string& output);
 private:
 	void ExecuteCommand(std::string& output, const Operation& op, const bool saveForRollback = true);
-	bool ParseInput(std::string& input, Operation& op);
+	bool ParseInput(const std::string& input, Operation& op);
 	void ExecuteRollback();
 };

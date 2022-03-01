@@ -5,6 +5,6 @@
 
 namespace Utility
 {
-	std::vector<std::string> SplitString(std::string& input, const std::string& delimiter);
+	std::vector<std::string> SplitString(const std::string& input, const std::string& delimiter);
 	void StringToUpper(std::string& input);
 }
