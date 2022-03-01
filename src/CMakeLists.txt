@@ -3,6 +3,10 @@ add_library(
 	STATIC
 	store.cpp
 	store.h
+	utility.cpp
+	utility.h
+	tests.cpp
+	tests.h
 )
 
 target_include_directories(
