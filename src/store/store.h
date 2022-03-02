@@ -18,7 +18,13 @@ public:
 		command(_command), key(_key), value(_value) {}
 	Operation(const Operation& other):
 		command(other.command), key(other.key), value(other.value) {}
-	Operation& operator=(const Operation& other) {command = other.command; key = other.key; value = other.value;}
+	Operation& operator=(const Operation& other) 
+	{
+		if(this == &other) /* check for self-assignment */
+			return *this;
+		command = other.command; key = other.key; value = other.value;
+		return *this;
+	}
 };
 
 class Store
