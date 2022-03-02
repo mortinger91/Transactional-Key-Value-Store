@@ -1,7 +1,7 @@
 // main.cpp : This file contains the 'main' function. Program execution begins and ends there.
 
-#include "store.h"
-#include "tests.h"
+#include "src/store/store.h"
+#include "src/store/tests.h"
 
 int main()
 {

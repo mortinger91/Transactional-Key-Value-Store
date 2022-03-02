@@ -195,7 +195,7 @@ void Store::ExecuteCommand(std::string& output, const Operation& op, const bool 
 void Store::ExecuteRollback()
 {
 	std::string output;
-	for (int i = stack.top().size()-1; i >= 0; i--)
+	for (int i = static_cast<int>(stack.top().size())-1; i >= 0; i--)
 	{
 		ExecuteCommand(output, stack.top()[i], false);
 	}
